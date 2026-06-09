@@ -1,153 +1,208 @@
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-[60px] border-t border-gray-200">
+    <footer className="bg-slate-900 text-white">
 
-      <div className="max-w-[1000px] mx-auto px-6">
+      {/* Main Footer */}
+      <div className="max-w-[1200px] mx-auto px-6 py-20">
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
 
-          {/* Logo Column */}
-          <div>
+          {/* Brand */}
+          <div className="lg:col-span-2">
 
-            <div
-              className="
-                w-10
-                h-10
-                rounded-full
-                bg-black
-                flex
-                items-center
-                justify-center
-                cursor-pointer
-                transition-all
-                duration-300
-                hover:scale-110
-              "
-            >
-              <div className="w-5 h-5 border-2 border-white rounded-full"></div>
+            <div className="flex items-center gap-3">
+
+              <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-xl font-bold">
+                P
+              </div>
+
+              <h2 className="text-2xl font-bold">
+                Prism
+              </h2>
+
             </div>
 
-            <p className="text-[11px] text-gray-500 mt-4 leading-5">
-              Amet minim mollit non deserunt ullamco est sit aliqua
-              dolor do amet sint.
+            <p className="mt-6 text-slate-400 leading-8 max-w-md">
+              We help startups and businesses create
+              beautiful digital products that drive
+              growth, engagement, and long-term success.
             </p>
 
+            {/* Newsletter */}
+
+            <div className="mt-8">
+
+              <h4 className="font-semibold mb-4">
+                Subscribe To Newsletter
+              </h4>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="
+                    flex-1
+                    px-4
+                    py-3
+                    rounded-xl
+                    bg-slate-800
+                    border
+                    border-slate-700
+                    outline-none
+                    focus:border-blue-500
+                  "
+                />
+
+                <button
+                  className="
+                    bg-blue-600
+                    px-6
+                    py-3
+                    rounded-xl
+                    font-medium
+                    transition-all
+                    duration-300
+                    hover:bg-blue-700
+                    hover:scale-105
+                  "
+                >
+                  Subscribe
+                </button>
+
+              </div>
+
+            </div>
+
           </div>
 
-          {/* Column 1 */}
+          {/* Company */}
+
           <div>
 
-            <h3 className="font-semibold text-[13px] mb-4">
-              Heading
+            <h3 className="font-semibold text-lg mb-6">
+              Company
             </h3>
 
-            <ul className="space-y-2 text-[11px] text-gray-500">
+            <ul className="space-y-4 text-slate-400">
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                About Us
               </li>
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                Careers
               </li>
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                Blog
               </li>
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                Contact
               </li>
 
             </ul>
 
           </div>
 
-          {/* Column 2 */}
+          {/* Services */}
+
           <div>
 
-            <h3 className="font-semibold text-[13px] mb-4">
-              Heading
+            <h3 className="font-semibold text-lg mb-6">
+              Services
             </h3>
 
-            <ul className="space-y-2 text-[11px] text-gray-500">
+            <ul className="space-y-4 text-slate-400">
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                UI/UX Design
               </li>
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                Web Development
               </li>
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                Mobile Apps
               </li>
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                Branding
               </li>
 
             </ul>
 
           </div>
 
-          {/* Column 3 */}
+          {/* Support */}
+
           <div>
 
-            <h3 className="font-semibold text-[13px] mb-4">
-              Heading
+            <h3 className="font-semibold text-lg mb-6">
+              Support
             </h3>
 
-            <ul className="space-y-2 text-[11px] text-gray-500">
+            <ul className="space-y-4 text-slate-400">
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                Help Center
               </li>
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                Privacy Policy
               </li>
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                Terms & Conditions
               </li>
 
-              <li className="hover:text-black transition-all duration-300 cursor-pointer">
-                Link Here
+              <li className="hover:text-white transition-all duration-300 cursor-pointer">
+                FAQs
               </li>
 
             </ul>
 
           </div>
 
-          {/* Social */}
-          <div>
+        </div>
 
-            <h3 className="font-semibold text-[13px] mb-4">
-              Connect With Us
-            </h3>
+      </div>
 
-            <div className="flex gap-3">
+      {/* Bottom Footer */}
 
-              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-black hover:text-white hover:scale-110">
-                <Facebook size={14} />
-              </div>
+      <div className="border-t border-slate-800">
 
-              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-black hover:text-white hover:scale-110">
-                <Twitter size={14} />
-              </div>
+        <div className="max-w-[1200px] mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
 
-              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-black hover:text-white hover:scale-110">
-                <Linkedin size={14} />
-              </div>
+          <p className="text-slate-400 text-sm">
+            © 2026 Prism. All rights reserved.
+          </p>
 
-              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-black hover:text-white hover:scale-110">
-                <Instagram size={14} />
-              </div>
+          <div className="flex gap-4">
 
+            <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-blue-600 hover:scale-110">
+              <FaFacebookF />
+            </div>
+
+            <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-blue-600 hover:scale-110">
+              <FaTwitter />
+            </div>
+
+            <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-blue-600 hover:scale-110">
+              <FaLinkedinIn />
+            </div>
+
+            <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-blue-600 hover:scale-110">
+              <FaInstagram />
             </div>
 
           </div>

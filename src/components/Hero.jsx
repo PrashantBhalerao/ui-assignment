@@ -1,82 +1,119 @@
+import { motion } from "framer-motion";
+
 const Hero = () => {
-return ( <section className="bg-[#f3f3f3]"> <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 min-h-[540px]">
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
 
-    {/* Left Content */}
-    <div className="flex flex-col justify-center px-10 lg:px-16">
+      {/* Blur Effects */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl"></div>
 
-      <h1 className="text-[56px] font-bold leading-[1.15] text-[#222] max-w-[380px]">
-        Great design is invisible
-      </h1>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
 
-      <p className="mt-6 text-[#6b7280] text-lg">
-        Lorem ipsum dolor sit amet consectetur
-      </p>
+      <div className="max-w-[1200px] mx-auto px-6 min-h-[90vh] grid md:grid-cols-2 items-center gap-10">
 
-      <button
-        className="
-        mt-8
-        w-fit
-        bg-black
-        text-white
-        px-8
-        py-3
-        text-sm
-        transition-all
-        duration-300
-        hover:bg-[#333]
-        hover:scale-105
-        active:scale-95
-      "
-      >
-        Button
-      </button>
+        {/* LEFT */}
+        <motion.div
+          initial={{ opacity:0, x:-50 }}
+          animate={{ opacity:1, x:0 }}
+          transition={{ duration:0.8 }}
+        >
 
-    </div>
+          <span className="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium">
+            🚀 Digital Agency
+          </span>
 
-    {/* Right Placeholder */}
-    <div
-      className="
-      relative
-      bg-[#dcdcdc]
-      border-l
-      border-[#cfcfcf]
-      transition-all
-      duration-500
-      hover:bg-[#d6d6d6]
-    "
-    >
+          <h1 className="mt-6 text-5xl md:text-6xl font-extrabold leading-tight text-slate-900">
+            Build Digital
+            <span className="text-blue-600"> Experiences</span>
+            <br />
+            That Users Love
+          </h1>
 
-      <svg
-        className="absolute inset-0 w-full h-full"
-        preserveAspectRatio="none"
-        viewBox="0 0 100 100"
-      >
-        <line
-          x1="0"
-          y1="0"
-          x2="100"
-          y2="100"
-          stroke="#bdbdbd"
-          strokeWidth="0.2"
-        />
+          <p className="mt-6 text-gray-600 text-lg leading-8 max-w-[550px]">
+            We help startups and businesses create
+            beautiful digital products that attract
+            customers, increase engagement and grow revenue.
+          </p>
 
-        <line
-          x1="100"
-          y1="0"
-          x2="0"
-          y2="100"
-          stroke="#bdbdbd"
-          strokeWidth="0.2"
-        />
-      </svg>
+          <div className="flex gap-4 mt-8">
 
-    </div>
+            <button
+              className="
+              bg-blue-600
+              text-white
+              px-8
+              py-4
+              rounded-xl
+              font-medium
+              transition-all
+              duration-300
+              hover:bg-blue-700
+              hover:scale-105
+            "
+            >
+              Get Started
+            </button>
 
-  </div>
-</section>
+            <button
+              className="
+              border
+              border-gray-300
+              px-8
+              py-4
+              rounded-xl
+              font-medium
+              transition-all
+              duration-300
+              hover:bg-white
+              hover:shadow-lg
+            "
+            >
+              Learn More
+            </button>
 
+          </div>
 
-);
+        </motion.div>
+
+        {/* RIGHT */}
+
+        <motion.div
+          initial={{ opacity:0, x:50 }}
+          animate={{ opacity:1, x:0 }}
+          transition={{ duration:0.8 }}
+          className="relative"
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1000"
+            alt="Team Working"
+            className="
+              rounded-3xl
+              shadow-2xl
+              w-full
+              object-cover
+              hover:scale-[1.02]
+              transition-all
+              duration-500
+            "
+          />
+
+          <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl">
+            <h3 className="font-bold text-2xl text-blue-600">
+              12K+
+            </h3>
+
+            <p className="text-sm text-gray-500">
+              Happy Clients
+            </p>
+          </div>
+
+        </motion.div>
+
+      </div>
+
+    </section>
+  );
 };
 
 export default Hero;

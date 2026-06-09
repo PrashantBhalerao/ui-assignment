@@ -1,140 +1,136 @@
+import { motion } from "framer-motion";
+import { Star } from "lucide-react";
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "Product Manager",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300",
+    review:
+      "Working with this team completely transformed our online presence. Their attention to detail and commitment to quality exceeded our expectations.",
+  },
+  {
+    name: "Michael Chen",
+    role: "Startup Founder",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300",
+    review:
+      "The project was delivered on time and the results were outstanding. We've seen a significant increase in user engagement and conversions.",
+  },
+];
+
 const TestimonialsSection = () => {
   return (
-    <section className="bg-white py-[70px]">
+    <section className="py-24 bg-white overflow-hidden">
 
-      <div className="max-w-[1000px] mx-auto px-6">
+      <div className="max-w-[1200px] mx-auto px-6">
 
         {/* Heading */}
-        <h2 className="text-center text-[22px] font-bold text-[#222]">
-          Our Happy Clients
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
 
-        {/* Testimonials */}
-        <div className="flex items-center justify-center gap-6 mt-12">
+          <span className="text-blue-600 font-semibold">
+            TESTIMONIALS
+          </span>
 
-          {/* Left Arrow */}
-          <button
-            className="
-              text-gray-400
-              text-2xl
-              transition-all
-              duration-300
-              hover:text-black
-              hover:scale-125
-            "
-          >
-            ‹
-          </button>
+          <h2 className="mt-3 text-4xl font-bold text-slate-900">
+            What Our Clients Say
+          </h2>
 
-          {/* Card 1 */}
-          <div
-            className="
-              w-[360px]
-              bg-[#f7f7f7]
-              p-5
-              transition-all
-              duration-300
-              hover:-translate-y-2
-              hover:shadow-lg
-            "
-          >
+          <p className="mt-4 text-gray-600 max-w-[650px] mx-auto">
+            Trusted by businesses worldwide to create exceptional
+            digital experiences and measurable growth.
+          </p>
 
-            <p className="text-[11px] text-gray-500 leading-5">
-              Lorem ipsum dolor sit amet consectetur. Condimentum
-              eget erat id sed urna et quis interdum. Blandit
-              mattis nibh rhoncus non, nec leo dui vulputate.
-              Morbi pellentesque eu mauris. Nulla facilisi.
-            </p>
+        </motion.div>
 
-            <div className="flex items-center gap-3 mt-5">
+        {/* Cards */}
+        <div className="flex flex-col lg:flex-row justify-center gap-8 mt-16">
 
-              <div
-                className="
-                  w-10
-                  h-10
-                  rounded-full
-                  bg-gray-300
-                  transition-all
-                  duration-300
-                  hover:scale-110
-                "
-              />
+          {testimonials.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2,
+              }}
+              className="
+                flex-1
+                bg-white/80
+                backdrop-blur-sm
+                border
+                border-gray-100
+                rounded-3xl
+                p-8
+                shadow-lg
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:shadow-2xl
+              "
+            >
 
-              <div>
-                <h4 className="text-[12px] font-semibold">
-                  Jacqueline Wright
-                </h4>
+              {/* Stars */}
+              <div className="flex gap-1 mb-5">
 
-                <p className="text-[10px] text-gray-500">
-                  Customer
-                </p>
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    size={18}
+                    fill="#FBBF24"
+                    color="#FBBF24"
+                  />
+                ))}
+
               </div>
 
-            </div>
+              {/* Review */}
+              <p className="text-gray-600 leading-8">
+                "{item.review}"
+              </p>
 
-          </div>
+              {/* User */}
+              <div className="flex items-center gap-4 mt-8">
 
-          {/* Card 2 */}
-          <div
-            className="
-              w-[360px]
-              bg-[#f7f7f7]
-              p-5
-              transition-all
-              duration-300
-              hover:-translate-y-2
-              hover:shadow-lg
-            "
-          >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="
+                    w-14
+                    h-14
+                    rounded-full
+                    object-cover
+                    transition-all
+                    duration-300
+                    hover:scale-110
+                  "
+                />
 
-            <p className="text-[11px] text-gray-500 leading-5">
-              Lorem ipsum dolor sit amet consectetur. Condimentum
-              eget erat id sed urna et quis interdum. Blandit
-              mattis nibh rhoncus non, nec leo dui vulputate.
-              Morbi pellentesque eu mauris. Nulla facilisi.
-            </p>
+                <div>
 
-            <div className="flex items-center gap-3 mt-5">
+                  <h4 className="font-semibold text-slate-900">
+                    {item.name}
+                  </h4>
 
-              <div
-                className="
-                  w-10
-                  h-10
-                  rounded-full
-                  bg-gray-300
-                  transition-all
-                  duration-300
-                  hover:scale-110
-                "
-              />
+                  <p className="text-sm text-gray-500">
+                    {item.role}
+                  </p>
 
-              <div>
-                <h4 className="text-[12px] font-semibold">
-                  Jacqueline Wright
-                </h4>
+                </div>
 
-                <p className="text-[10px] text-gray-500">
-                  Customer
-                </p>
               </div>
 
-            </div>
-
-          </div>
-
-          {/* Right Arrow */}
-          <button
-            className="
-              text-gray-400
-              text-2xl
-              transition-all
-              duration-300
-              hover:text-black
-              hover:scale-125
-            "
-          >
-            ›
-          </button>
+            </motion.div>
+          ))}
 
         </div>
 

@@ -1,137 +1,174 @@
-const StrategySection = () => {
-  return (
-    <section className="bg-[#f5f5f5] py-[70px]">
+import { motion } from "framer-motion";
+import {
+  Users,
+  TrendingUp,
+  Briefcase,
+  Star,
+} from "lucide-react";
 
-      <div className="max-w-[1000px] mx-auto px-6">
+const StrategySection = () => {
+  const stats = [
+    {
+      icon: <Users size={24} />,
+      value: "12K+",
+      title: "Happy Clients",
+    },
+    {
+      icon: <TrendingUp size={24} />,
+      value: "55%",
+      title: "Annual Growth",
+    },
+    {
+      icon: <Briefcase size={24} />,
+      value: "5K+",
+      title: "Projects Delivered",
+    },
+    {
+      icon: <Star size={24} />,
+      value: "98%",
+      title: "Positive Ratings",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-slate-50 overflow-hidden">
+
+      <div className="max-w-[1200px] mx-auto px-6">
 
         {/* Heading */}
-        <h2 className="text-center text-[22px] md:text-[30px] font-bold leading-[1.4] text-[#222] max-w-[650px] mx-auto">
-          Our business strategy has helped many
-          businesses across the globe
-        </h2>
-
-        {/* Description */}
-        <p className="text-center text-[12px] text-gray-500 max-w-[600px] mx-auto mt-5 leading-6">
-          Lorem ipsum dolor sit amet consectetur.
-          Elementum nisi duis tortor sed.
-          Suspendisse lobortis vitae quis vehicula
-          pellentesque sit id.
-        </p>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-
-          <div
-            className="
-            text-center
-            transition-all
-            duration-300
-            hover:-translate-y-1
-          "
-          >
-            <h4 className="font-semibold text-[12px]">
-              Clients
-            </h4>
-
-            <p className="mt-2 text-[18px] font-bold">
-              12K
-            </p>
-          </div>
-
-          <div
-            className="
-            text-center
-            transition-all
-            duration-300
-            hover:-translate-y-1
-          "
-          >
-            <h4 className="font-semibold text-[12px]">
-              Annual Growth
-            </h4>
-
-            <p className="mt-2 text-[18px] font-bold">
-              55%
-            </p>
-          </div>
-
-          <div
-            className="
-            text-center
-            transition-all
-            duration-300
-            hover:-translate-y-1
-          "
-          >
-            <h4 className="font-semibold text-[12px]">
-              No Of Projects
-            </h4>
-
-            <p className="mt-2 text-[18px] font-bold">
-              5K
-            </p>
-          </div>
-
-          <div
-            className="
-            text-center
-            transition-all
-            duration-300
-            hover:-translate-y-1
-          "
-          >
-            <h4 className="font-semibold text-[12px]">
-              Positive Ratings
-            </h4>
-
-            <p className="mt-2 text-[18px] font-bold">
-              80%
-            </p>
-          </div>
-
-        </div>
-
-        {/* Image Placeholder */}
-        <div
-          className="
-          relative
-          mt-12
-          w-full
-          h-[350px]
-          bg-[#dddddd]
-          border
-          border-[#cfcfcf]
-          transition-all
-          duration-500
-          hover:bg-[#d5d5d5]
-        "
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
         >
 
-          <svg
-            className="absolute inset-0 w-full h-full"
-            preserveAspectRatio="none"
-            viewBox="0 0 100 100"
-          >
-            <line
-              x1="0"
-              y1="0"
-              x2="100"
-              y2="100"
-              stroke="#bdbdbd"
-              strokeWidth="0.3"
-            />
+          <span className="text-blue-600 font-semibold">
+            BUSINESS GROWTH
+          </span>
 
-            <line
-              x1="100"
-              y1="0"
-              x2="0"
-              y2="100"
-              stroke="#bdbdbd"
-              strokeWidth="0.3"
-            />
-          </svg>
+          <h2 className="mt-3 text-4xl font-bold text-slate-900">
+            Helping Businesses Scale Globally
+          </h2>
+
+          <p className="mt-4 text-gray-600 max-w-[700px] mx-auto">
+            We combine strategy, innovation, and technology to
+            accelerate business growth and deliver measurable
+            results for companies around the world.
+          </p>
+
+        </motion.div>
+
+        {/* Stats Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+
+          {stats.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+              }}
+              className="
+                bg-white
+                rounded-3xl
+                p-6
+                shadow-lg
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:shadow-2xl
+              "
+            >
+
+              <div className="text-blue-600">
+                {item.icon}
+              </div>
+
+              <h3 className="mt-4 text-3xl font-bold text-slate-900">
+                {item.value}
+              </h3>
+
+              <p className="mt-2 text-gray-600">
+                {item.title}
+              </p>
+
+            </motion.div>
+          ))}
 
         </div>
+
+        {/* Dashboard Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mt-16"
+        >
+
+          <div
+            className="
+              relative
+              overflow-hidden
+              rounded-[32px]
+              shadow-2xl
+            "
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600"
+              alt="Analytics Dashboard"
+              className="
+                w-full
+                h-[500px]
+                object-cover
+                transition-all
+                duration-700
+                hover:scale-105
+              "
+            />
+
+            {/* Overlay */}
+            <div
+              className="
+                absolute
+                inset-0
+                bg-gradient-to-t
+                from-black/50
+                via-black/10
+                to-transparent
+              "
+            />
+
+            {/* Floating Card */}
+            <div
+              className="
+                absolute
+                bottom-8
+                left-8
+                bg-white
+                rounded-2xl
+                p-5
+                shadow-xl
+              "
+            >
+              <h4 className="font-bold text-slate-900">
+                Revenue Growth
+              </h4>
+
+              <p className="text-green-600 font-semibold mt-1">
+                +48.2% this year
+              </p>
+            </div>
+
+          </div>
+
+        </motion.div>
 
       </div>
 
