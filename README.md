@@ -1,46 +1,208 @@
-# Landing Page — UI Developer Assignment
+# Landing Page UI Developer Assignment
 
-Pixel-perfect implementation of the provided wireframe using React.js + Tailwind CSS.
+A modern, responsive, and pixel-perfect landing page built using React.js and Tailwind CSS based on the provided wireframe design.
 
-## Sections (matching wireframe exactly)
+## Live Demo
 
-1. **Navbar** — Logo, 5 nav links, CTA button, mobile hamburger menu
-2. **Hero** — Left text/headline/button + right large image placeholder
-3. **Why Our Clients Trust Us** — 2×2 staggered image grid + 4-item checklist + button
-4. **Stats Banner** — Heading, 4 animated count-up stats, full-width image
-5. **Our Partners** — 4 partner logos in a row
-6. **Latest Blog** — 3 blog cards with image, category, title, description, "learn more"
-7. **Our Happy Clients** — Paginated testimonial carousel with prev/next arrows
-8. **FAQ** — Left image + right accordion with open/close animations
-9. **CTA Banner** — Dark background, text left, button right
-10. **Footer** — Logo+desc, 4 link columns, social icons
+**Live Preview:** https://uiassignment-byprashant.netlify.app/
 
-## Features
-- Pixel-perfect wireframe layout match
-- Scroll-triggered reveal animations (fade-up, slide-in from left/right)
-- Animated count-up stat numbers
-- Interactive FAQ accordion
-- Testimonial pagination carousel with dot indicators
-- Sticky scroll-aware navbar
-- Fully responsive (mobile/tablet/desktop)
-- Clean light theme with Syne + Plus Jakarta Sans fonts
+**GitHub Repository:** https://github.com/PrashantBhalerao/ui-assignment
 
-## Setup
+---
+
+## Tech Stack
+
+* React.js
+* Tailwind CSS
+* Vite
+* Lucide React Icons
+* React Hooks
+
+---
+
+## Assignment Requirements Covered
+
+### Pixel-Perfect Layout
+
+* Implemented the provided wireframe with accurate spacing, alignment, and structure.
+* Maintained the original layout hierarchy while enhancing the visual design.
+
+### Modern UI Enhancements
+
+* Improved typography using Syne and Plus Jakarta Sans.
+* Added modern color palette and visual hierarchy.
+* Interactive hover effects and smooth transitions.
+
+### Responsive Design
+
+* Mobile-first approach.
+* Optimized for Mobile, Tablet, and Desktop devices.
+* Responsive navigation with hamburger menu.
+
+### Animations & Interactions
+
+* Scroll reveal animations.
+* Smooth fade-up and slide-in effects.
+* Animated statistic counters.
+* Interactive FAQ accordion.
+* Testimonial carousel navigation.
+
+---
+
+## Sections Implemented
+
+### 1. Navbar
+
+* Logo
+* Navigation links
+* Call-to-action button
+* Mobile menu
+
+### 2. Hero Section
+
+* Headline
+* Supporting description
+* CTA button
+* Hero image area
+
+### 3. Why Our Clients Trust Us
+
+* Staggered image layout
+* Trust checklist
+* Action button
+
+### 4. Statistics Banner
+
+* Animated count-up statistics
+* Section heading
+* Full-width banner image
+
+### 5. Partners Section
+
+* Partner logo showcase
+* Responsive grid layout
+
+### 6. Latest Blog
+
+* Blog cards
+* Category labels
+* Descriptions
+* Learn More links
+
+### 7. Testimonials
+
+* Client reviews
+* Carousel navigation
+* Pagination indicators
+
+### 8. FAQ Section
+
+* Accordion component
+* Expand/collapse animations
+* Responsive layout
+
+### 9. CTA Banner
+
+* Promotional call-to-action
+* Primary action button
+
+### 10. Footer
+
+* Company information
+* Navigation columns
+* Social media icons
+
+---
+
+## Key Features
+
+* Pixel-perfect wireframe implementation
+* Fully responsive design
+* Sticky navigation bar
+* Animated statistics counters
+* Scroll-triggered animations
+* Testimonial carousel
+* Interactive FAQ accordion
+* Clean component-based architecture
+* Reusable React components
+* Optimized performance
+
+---
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── TrustSection.jsx
+│   ├── StatsBanner.jsx
+│   ├── Partners.jsx
+│   ├── Blog.jsx
+│   ├── Testimonials.jsx
+│   ├── FAQ.jsx
+│   ├── CTASection.jsx
+│   └── Footer.jsx
+│
+├── assets/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project folder:
+
+```bash
+cd landing-page
+```
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start development server:
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173)
+---
 
-## Build
+## Production Build
+
+Generate production build:
 
 ```bash
 npm run build
+```
+
+Preview production build locally:
+
+```bash
 npm run preview
 ```
 
-## Deploy
+---
 
-Push to GitHub → import on [vercel.com](https://vercel.com) → deploy (zero config)
+## Author
+
+**Prashant Bhalerao**
+
+Frontend Developer
+
+GitHub: https://github.com/PrashantBhalerao
+
+LinkedIn: https://www.linkedin.com/in/prashant-bhalerao
+
